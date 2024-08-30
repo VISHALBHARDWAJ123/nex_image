@@ -238,7 +238,8 @@ class _NexImageState extends State<NexImage> {
             fit: widget._fit,
             color: widget._color,
             alignment: widget._imgAlignment,
-            errorWidget: widget._errorWidgetForNetwork ?? defaultNetworkImageErrorBuilder,
+            errorWidget: widget._errorWidgetForNetwork ??
+                defaultNetworkImageErrorBuilder,
             placeholder: widget._placeholder ?? defaultPlaceholder,
             errorListener: widget._errorListener,
             maxHeightDiskCache: widget._maxHeightDiskCache,
@@ -273,7 +274,8 @@ class _NexImageState extends State<NexImage> {
                     height: widget._height,
                     filterQuality: widget._filterQuality,
                     repeat: widget._repeatLottie,
-                    errorWidget: widget._errorWidget ?? defaultImageErrorBuilder,
+                    errorWidget:
+                        widget._errorWidget ?? defaultImageErrorBuilder,
                     reverse: widget._reverse,
                     blendMode: widget._blendMode,
                   )
@@ -286,8 +288,10 @@ class _NexImageState extends State<NexImage> {
                     height: widget._height,
                     filterQuality: widget._filterQuality,
                     repeat: widget._repeat,
-                    errorWidget: widget._errorWidget ?? defaultImageErrorBuilder,
-                    frameWidget: widget._frameWidget ?? defaultImageFrameBuilder,
+                    errorWidget:
+                        widget._errorWidget ?? defaultImageErrorBuilder,
+                    frameWidget:
+                        widget._frameWidget ?? defaultImageFrameBuilder,
                     blendMode: widget._blendMode,
                   );
   }

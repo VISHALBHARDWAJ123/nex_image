@@ -2,7 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
 import 'package:nex_image/nex_image.dart';
 
-ImageFrameBuilder get defaultImageFrameBuilder => (BuildContext context, Widget child, int? frame, bool wasSynchronouslyLoaded) {
+ImageFrameBuilder get defaultImageFrameBuilder => (BuildContext context,
+        Widget child, int? frame, bool wasSynchronouslyLoaded) {
       // If the image is loaded synchronously (e.g., a local asset), show the image directly
       if (wasSynchronouslyLoaded) {
         return child;
@@ -17,7 +18,8 @@ ImageFrameBuilder get defaultImageFrameBuilder => (BuildContext context, Widget 
       return child;
     };
 
-ImageErrorWidgetBuilder get defaultImageErrorBuilder => (context, error, stackTrace) {
+ImageErrorWidgetBuilder get defaultImageErrorBuilder =>
+    (context, error, stackTrace) {
       print('[NexImage] Error>>>>>$error');
       // Error fallback
       return const Center(
@@ -29,7 +31,8 @@ ImageErrorWidgetBuilder get defaultImageErrorBuilder => (context, error, stackTr
       );
     };
 
-ImageFrameBuilder get defaultNetworkImageFrameBuilder => (BuildContext context, Widget child, int? frame, bool wasSynchronouslyLoaded) {
+ImageFrameBuilder get defaultNetworkImageFrameBuilder => (BuildContext context,
+        Widget child, int? frame, bool wasSynchronouslyLoaded) {
       // If the image is loaded synchronously (e.g., a local asset), show the image directly
       if (wasSynchronouslyLoaded) {
         return child;
@@ -48,7 +51,8 @@ Widget get defaultPlaceholder => const Center(
       child: CircularProgressIndicator(), // Loading spinner
     );
 
-LoadingErrorWidgetBuilder get defaultNetworkImageErrorBuilder => (context, error, stackTrace) {
+LoadingErrorWidgetBuilder get defaultNetworkImageErrorBuilder =>
+    (context, error, stackTrace) {
       print(error.toString());
       // Error fallback
       return const Center(
@@ -131,6 +135,7 @@ Future<MemoryImage> loadTiffImage(String path) async {
   } catch (e) {
     print('Error loading TIFF image: $e');
     // Fallback to a placeholder image or handle error as needed
-    return MemoryImage(Uint8List.fromList([])); // Return an empty image as fallback
+    return MemoryImage(
+        Uint8List.fromList([])); // Return an empty image as fallback
   }
 }
