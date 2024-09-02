@@ -10,6 +10,10 @@ NexImage is a Flutter widget that simplifies image rendering and animation suppo
 - **PDF to Image Conversion**: Converts the first page of a PDF into an image for quick display.
 - **Multiple Image Extension Support**: Handles various image formats including SVG, PNG, BMP, GIF, WEBP, TIFF, HEIC, and more.
 
+## Screenshots
+![Example](screenshots/Screenshot_2024_0902_094146.jpg)
+
+
 ## Installation
 
 Add `nex_image` to your `pubspec.yaml` file:
