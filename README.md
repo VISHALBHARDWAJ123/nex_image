@@ -135,4 +135,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-This README provides an overview of your library's features, installation instructions, basic usage examples, supported image formats, and contribution guidelines. Adjust the content as needed to match your project's specifics.
