@@ -1,39 +1,134 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# NexImage
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+NexImage is a Flutter widget that simplifies image rendering and animation support across various formats, both from assets and network sources. This library provides automatic asset image detection, supports Lottie animations, handles network images efficiently, and can even convert PDFs to images. It aims to streamline the process of displaying multiple image formats in Flutter applications.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Automatic Asset Image Detection**: Easily detects and renders different image formats directly from the asset files.
+- **Lottie Animation Support**: Displays Lottie animations from both asset files and network URLs.
+- **Network Image Support**: Efficiently loads network images using `CachedNetworkImage` for optimized caching and performance.
+- **PDF to Image Conversion**: Converts the first page of a PDF into an image for quick display.
+- **Multiple Image Extension Support**: Handles various image formats including SVG, PNG, BMP, GIF, WEBP, TIFF, HEIC, and more.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add `nex_image` to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  nex_image: ^1.0.0
+```
+
+Then, run:
+
+```bash
+flutter pub get
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here's how to use the `NexImage` widget to display different types of images:
+
+### Displaying Asset Images
 
 ```dart
-const like = 'sample';
+import 'package:nex_image/nex_image.dart';
+
+Column(
+  children: [
+    Text('PNG Image'),
+    NexImage.asset(
+      imagePath: 'assets/images/sample.png',
+    ),
+  ],
+);
 ```
 
-## Additional information
+### Displaying Network Images
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+import 'package:nex_image/nex_image.dart';
+
+Column(
+  children: [
+    Text('Network Image'),
+    NexImage.network(
+      imageUrl: 'https://example.com/sample.jpg',
+    ),
+  ],
+);
+```
+
+### Displaying Lottie Animations
+
+#### From Assets
+
+```dart
+import 'package:nex_image/nex_image.dart';
+
+Column(
+  children: [
+    Text('Lottie Animation from Assets'),
+    NexImage.lottie(
+      imagePath: 'assets/animations/sample.json',
+      repeat: true,
+    ),
+  ],
+);
+```
+
+#### From Network
+
+```dart
+import 'package:nex_image/nex_image.dart';
+
+Column(
+  children: [
+    Text('Lottie Animation from Network'),
+    NexImage.lottie(
+      imagePath: 'https://example.com/animation.json',
+      repeat: true,
+    ),
+  ],
+);
+```
+
+### Displaying PDF as Image
+
+```dart
+import 'package:nex_image/nex_image.dart';
+
+Column(
+  children: [
+    Text('PDF as Image'),
+    NexImage.asset(
+      imagePath: 'assets/pdfs/sample.pdf',
+    ),
+  ],
+);
+```
+
+## Supported Image Formats
+
+- **SVG**: Scalable Vector Graphics
+- **PNG**: Portable Network Graphics
+- **BMP**: Bitmap Image File
+- **GIF**: Graphics Interchange Format (supports animation)
+- **WEBP**: WebP image format
+- **TIFF**: Tagged Image File Format
+- **HEIC**: High-Efficiency Image Coding
+- **PDF**: Displays the first page of the PDF as an image
+- **Network Images**: Any standard image format from a URL
+- **Lottie Animations**: JSON-based animations
+
+## Contribution
+
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+This README provides an overview of your library's features, installation instructions, basic usage examples, supported image formats, and contribution guidelines. Adjust the content as needed to match your project's specifics.

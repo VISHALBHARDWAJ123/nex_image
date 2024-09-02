@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'NexImage Demo Home Page'),
     );
   }
 }
@@ -119,8 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text('Network'),
                 NexImage.network(
-                  imageUrl:
-                      'https://cdn.myanimelist.net/images/anime/1141/142503.jpg',
+                  imageUrl: 'https://cdn.myanimelist.net/images/anime/1141/142503.jpg',
                 ),
               ],
             ),
@@ -128,8 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text('Lottie Network'),
                 NexImage.lottie(
-                  imagePath:
-                      'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json',
+                  imagePath: 'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json',
                   repeat: true,
                 ),
               ],
