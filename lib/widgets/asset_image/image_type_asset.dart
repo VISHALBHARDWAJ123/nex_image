@@ -371,6 +371,5 @@ class _TiffAssetImageState extends State<_TiffAssetImage> {
         child: CircularProgressIndicator(),
       );
     }
-    ;
   }
 }

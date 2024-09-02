@@ -4,7 +4,7 @@ version: 1.0.0
 homepage:
 
 environment:
-  sdk: ^3.5.1
+  sdk: ^3.0.0
   flutter: ">=1.17.0"
 
 dependencies:
@@ -12,10 +12,10 @@ dependencies:
     sdk: flutter
   lottie: ^3.1.2
 
-  flutter_svg_provider: ^1.0.7
-  pdfx: ^2.6.0
-  image: ^4.2.0
-  cached_network_image: ^3.4.1
+  flutter_svg_provider:
+  pdfx:
+  image:
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:
