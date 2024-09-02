@@ -1,7 +1,7 @@
 name: nex_image
 description: "NexImage demonstrates the flexibility and capability of managing diverse media types."
 version: 1.0.0
-homepage:
+homepage: https://github.com/VISHALBHARDWAJ123/nex_image
 
 environment:
   sdk: ^3.0.0
